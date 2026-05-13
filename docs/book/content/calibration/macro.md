@@ -9,11 +9,11 @@ As the default rate of labor augmenting technological change, $g_y$, we use a va
 
 ### Foreign holding of government debt in the initial period
 
-The path of foreign holding of domestic debt is endogenous, but the initial period stock of debt held by foreign investors is exogenous.  We set this parameter, `initial_foreign_debt_ratio` to 0.95, consistent with [this report from the Ministry of Finance](https://www.mofed.gov.et/media/filer_public/9b/92/9b9264db-1a2b-4cd5-aa7d-f0307d67b4ce/public_sector_debt_statistical_bulletin_no_50.pdf).
+The path of foreign holding of domestic debt is endogenous, but the initial period stock of debt held by foreign investors is exogenous.  We set `initial_foreign_debt_ratio = 0.42` using the [Ministry of Finance Public Sector Debt Statistical Bulletin No. 50](https://www.mofed.gov.et/media/filer_public/9b/92/9b9264db-1a2b-4cd5-aa7d-f0307d67b4ce/public_sector_debt_statistical_bulletin_no_50.pdf), Table 25, which reports external debt of USD 28,795.02 million against total public debt of USD 68,080.45 million as of 30 June 2024 (42.30 percent foreign share).
 
 ### Foreign purchases of newly issued debt
 
-We set $\zeta_D = 0.95$, the same as initial holdings of government debt by foreigners.
+We set $\zeta_D = 0.12$, the share of newly issued government debt held by foreign creditors.  This is anchored on the FY2023/24 flow data in the [Ministry of Finance Public Sector Debt Statistical Bulletin No. 50](https://www.mofed.gov.et/media/filer_public/9b/92/9b9264db-1a2b-4cd5-aa7d-f0307d67b4ce/public_sector_debt_statistical_bulletin_no_50.pdf), where the change in external debt was about USD 0.55 billion against a change in total public debt of about USD 4.75 billion, implying a foreign share of net new issuance near 11.6 percent.  Annual variation has been large in recent years (52, -152, 5, and 12 percent for 2020/21–2023/24); we use the most recent year.
 
 ### Foreign holdings of excess capital
 
@@ -41,7 +41,7 @@ where $\tau_d$ is the scale parameter and $\mu_d$ is the level shift parameter. 
 
 ### Aggregate transfers
 
-Aggregate (non-Social Security) transfers to households are set as a share of GDP with the parameter $\alpha_T$. We exclude Social Security from transfers since it is modeled specifically. With this definition, the share of transfers to GDP in 2015 is 0.034 according to [IMF data](https://data.imf.org/en/Data-Explorer?datasetUrn=IMF.STA:GFS_SOO(12.0.0)&INDICATOR=G271_T).
+Aggregate (non-Social Security) transfers to households are set as a share of GDP with the parameter $\alpha_T$. We exclude Social Security from transfers since it is modeled specifically. We set $\alpha_T = 0.05$, which combines about 3.4 percent of GDP for non-pension transfers reported in the [IMF Government Finance Statistics](https://data.imf.org/en/Data-Explorer?datasetUrn=IMF.STA:GFS_SOO(12.0.0)&INDICATOR=G271_T) (G27_T less G271_T) with an additional 1.6 percent of GDP for the broader set of social benefits and subsidies that flow to households (fuel, fertilizer, food and medicine subsidies, plus expanded safety net programs in the FY2024/25 social mitigation package documented in [IMF Country Report 25/188](https://www.imf.org/en/publications/cr/issues/2025/07/15/the-federal-democratic-republic-of-ethiopia-2025-article-iv-consultation-third-review-under-568611)).
 
 ### Government expenditures
 
